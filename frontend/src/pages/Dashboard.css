@@ -260,32 +260,38 @@
     margin-bottom: var(--space-md);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .dashboard-header {
-        flex-direction: column;
-        align-items: flex-start;
+/* Mobile improvements for transaction history */
+@media (max-width: 600px) {
+
+    /* Make table scrollable */
+    .responsive-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .dashboard-header .btn {
-        width: 100%;
+    .responsive-table table {
+        min-width: 600px;
+        /* ensure table width for scrolling */
     }
 
-    .exchange-direction {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .direction-info {
-        text-align: left;
-    }
-
+    /* Stack transaction items vertically if using flex list */
     .transaction-item {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+    }
+
+    .txn-amount {
+        align-self: flex-end;
+        margin-top: var(--space-xs);
+    }
+
+    .txn-details {
+        width: 100%;
     }
 
     .txn-status {
         width: 100%;
-        margin-top: var(--space-sm);
+        margin-top: var(--space-xs);
     }
 }
