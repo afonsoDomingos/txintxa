@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "https://txintxa.onrender.com/api/$1"
+        }
+    ]
+}
