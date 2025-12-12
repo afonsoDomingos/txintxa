@@ -14,6 +14,7 @@ const { connectDB, disconnectDB } = require('./config/database');
 
 // Importar rotas
 const authRoutes = require('./routes/auth.routes');
+const adminRoutes = require('./routes/admin.routes');
 const userRoutes = require('./routes/user.routes');
 const exchangeRoutes = require('./routes/exchange.routes');
 const transactionRoutes = require('./routes/transaction.routes');
@@ -108,7 +109,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/exchange', exchangeRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/webhooks', webhookRoutes);
-app.use('/api/assistant', assistantRoutes);
+app.use('/api/admin', adminRoutes);
 
 // ===========================================
 // TRATAMENTO DE ERROS
