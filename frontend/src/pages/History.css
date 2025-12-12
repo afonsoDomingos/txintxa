@@ -1,0 +1,353 @@
+/* History Page Styles */
+
+.history-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.history-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+}
+
+.header-actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+/* Filters Panel */
+.filters-panel {
+    padding: var(--space-lg);
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.filters-panel .form-group {
+    margin-bottom: 0;
+}
+
+/* Transactions Container */
+.transactions-container {
+    padding: 0;
+    overflow: hidden;
+}
+
+.loading-state {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-3xl);
+}
+
+.transactions-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-card {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: var(--space-lg);
+    align-items: center;
+    padding: var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background var(--transition-fast);
+}
+
+.transaction-card:last-child {
+    border-bottom: none;
+}
+
+.transaction-card:hover {
+    background: var(--bg-card-hover);
+}
+
+.txn-main {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.txn-type-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.txn-id {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.txn-type-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.txn-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.txn-amounts {
+    text-align: right;
+}
+
+.txn-sent {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.txn-received {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--success);
+}
+
+.txn-status-col {
+    min-width: 100px;
+    text-align: right;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.page-info {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: var(--space-3xl);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-lg);
+}
+
+.empty-state h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.empty-state p {
+    color: var(--text-muted);
+}
+
+/* Transaction Details Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    padding: var(--space-md);
+}
+
+.modal-content {
+    background: var(--bg-card);
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-2xl);
+    border: 1px solid var(--border);
+    animation: slideUp 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+}
+
+.modal-header {
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--space-xs);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: var(--space-lg);
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: var(--space-md) var(--space-lg);
+    border-top: 1px solid var(--border);
+}
+
+.detail-group {
+    margin-bottom: var(--space-md);
+}
+
+.detail-group.highlight label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.detail-group.highlight p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.detail-status {
+    margin-top: var(--space-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-status label {
+    color: var(--text-secondary);
+}
+
+.divider {
+    height: 1px;
+    background: var(--border);
+    margin: var(--space-lg) 0;
+    width: 100%;
+}
+
+.financial-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.account-details h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+    color: var(--text-secondary);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.detail-row span:first-child {
+    color: var(--text-secondary);
+}
+
+.detail-row .value {
+    font-weight: 500;
+}
+
+.detail-row.fee-row {
+    border-top: 1px dashed var(--border);
+    padding-top: var(--space-xs);
+    margin-top: var(--space-xs);
+}
+
+.detail-row.total-row {
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-md);
+    margin-top: var(--space-xs);
+    font-size: 1.1rem;
+}
+
+.detail-row .highlight {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.account-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.account-row span {
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .history-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .header-actions .btn {
+        flex: 1;
+    }
+
+    .transaction-card {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .txn-amounts,
+    .txn-status-col {
+        text-align: left;
+    }
+
+    .txn-amounts {
+        display: flex;
+        gap: var(--space-md);
+    }
+}

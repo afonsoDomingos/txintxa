@@ -1,0 +1,200 @@
+/* Profile Page Styles */
+
+.profile-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+.profile-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-xs);
+}
+
+.profile-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+}
+
+.profile-tabs {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: var(--space-md);
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: transparent;
+    color: var(--text-muted);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    background: var(--bg-card);
+}
+
+.tab-btn.active {
+    color: var(--primary);
+    background: rgba(255, 123, 0, 0.1);
+}
+
+.tab-content {
+    padding: var(--space-xl);
+}
+
+.tab-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.info-item label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.info-item p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.limits-section h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+}
+
+.limits-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.limit-bar {
+    height: 8px;
+    background: var(--bg-input);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.limit-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-start), var(--primary-end));
+    border-radius: var(--radius-full);
+}
+
+.account-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.account-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-icon.paypal {
+    background: rgba(0, 112, 186, 0.15);
+    color: #0070ba;
+}
+
+.account-icon.mpesa {
+    background: rgba(230, 0, 0, 0.15);
+    color: #e60000;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.account-linked {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--success);
+    font-size: 0.875rem;
+}
+
+.link-form {
+    display: flex;
+    gap: var(--space-sm);
+    flex: 1;
+    min-width: 250px;
+}
+
+.link-form .form-input {
+    flex: 1;
+}
+
+.security-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+}
+
+.security-info h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+}
+
+.security-info p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
